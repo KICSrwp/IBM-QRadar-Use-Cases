@@ -1,4 +1,4 @@
-# **QRadar Security Use Cases**
+# **IBM QRadar Security Use Cases**
 
 This document outlines several common security use cases for IBM QRadar, focusing on both real-time alerting via custom rules and historical investigation using Ariel Query Language (AQL).
 
