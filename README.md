@@ -45,7 +45,7 @@ To replicate the stats count by portion of your Splunk query for historical anal
    In the search bar, you will enter an AQL query. The following query is the QRadar equivalent of your Splunk search:
    ```
    SELECT QIDNAME(qid) as "Event Name", "Event ID", LOGSOURCENAME(logsourceid) as "Log Source", COUNT(\*) as "Count" FROM events WHERE devicetype \= 5 AND "Event ID" IN (1102, 1100, 104\) GROUP BY "Event ID", "Log Source" LAST 24 HOURS
-  ```
+
    * SELECT QIDNAME(qid) as "Event Name", "Event ID", LOGSOURCENAME(logsourceid) as "Log Source", COUNT(\*) as "Count": This selects the columns you want to display, similar to the by clause in your Splunk query. We are also getting the count of events.  
    * FROM events: This specifies that you are searching the events database.  
    * WHERE devicetype \= 5 AND "Event ID" IN (1102, 1100, 104): This is the filter condition. devicetype \= 5 is a common identifier for "Microsoft Windows Security Event Log". We then specify the Event IDs we are interested in.  
